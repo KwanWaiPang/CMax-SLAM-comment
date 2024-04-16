@@ -37,16 +37,16 @@
 
 # 测试记录
 
-1. DAVIS240c的测试情况：实时性很差(完全不能实时，1分钟左右的rosbag要跑超过10分钟)，不同的rosbag要用不同的参数。但运动补偿的效果看着还行（也可能是本身采用了slice event,如果增大事件量会发现运动补偿的效果特别的差～～～）估算的pose也不以ros输出
+1. DAVIS240c的测试情况：实时性很差(完全不能实时，1分钟左右的rosbag要跑超过8分钟)，不同的rosbag要用不同的参数。但运动补偿的效果看着还行（也可能是本身采用了slice event,如果增大事件量会发现运动补偿的效果特别的差～～～）估算的pose也不以ros输出
 
 运行测试davis240c（直接采用原包）：
 
     roslaunch cmax_slam davis240c_testing.launch
 
 效果：
-* [shapes_rotation]()
-* [poster_rotation]()
-* [dynamic_rotation]()
+* [shapes_rotation](https://www.bilibili.com/video/BV1F1421Z7PR/?vd_source=a88e426798937812a8ffc1a9be5a3cb7)
+* [poster_rotation](https://www.bilibili.com/video/BV1RD421p7Yp/)
+* [dynamic_rotation](https://www.bilibili.com/video/BV1dm411B7Fw/)
 
 2. DVXplorer（640*480分别率）
 
@@ -59,8 +59,34 @@
     roslaunch cmax_slam ecrot_mount.launch
 
 效果（完全不知道运行了啥 :joy: 连“map”都没有输出）：
-* [river]()
-* [tub_main_building]()
+* [river](https://www.bilibili.com/video/BV1Yz421r7bs/)
+* [tub_main_building](https://www.bilibili.com/video/BV1Vz421C7eS/)
+
+3. 如果在aggressive的情况，且增大num_events_per_packet为50000，运动补偿的效果极差，部分情况还不如不做CM运动补偿
+
+<p align="center">
+  <a href="">
+    <img src="pics/2024-04-16 16-21-47 的屏幕截图.png" alt="teaser" width="60%">
+  </a>
+  <a href="">
+    <img src="pics/2024-04-16 16-21-57 的屏幕截图.png" alt="teaser" width="60%">
+  </a>
+  <a href="">
+    <img src="pics/2024-04-16 16-22-18 的屏幕截图.png" alt="teaser" width="60%">
+  </a>
+  <a href="">
+    <img src="pics/2024-04-16 16-22-36 的屏幕截图.png" alt="teaser" width="60%">
+  </a>
+  <a href="">
+    <img src="pics/2024-04-16 16-24-56 的屏幕截图.png" alt="teaser" width="60%">
+  </a>
+  <a href="">
+    <img src="pics/2024-04-16 16-25-34 的屏幕截图.png" alt="teaser" width="60%">
+  </a>
+
+</p>
+
+
 
 # 结论
 

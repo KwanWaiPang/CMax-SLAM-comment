@@ -18,7 +18,7 @@
     <param name="backend_event_sample_rate" value="1" /> <!-- Further uniform event sampling rate, in back-end -->
 
     <!-- FRONT-END PARAMS -->
-    <param name="num_events_per_packet" value="20000" /> <!-- Number of events used to estimate one angular velocity: shapes 10k, poster 50k, boxes 30k, dynamic 20k -->
+    <param name="num_events_per_packet" value="50000" /> <!-- Number of events used to estimate one angular velocity: shapes 10k, poster 50k, boxes 30k, dynamic 20k -->
     <param name="dt_ang_vel" value="0.01" /> <!-- Angular velocity frequency f = 1/dt_ang_vel -->
     <param name="show_local_iwe" value="true" /> <!-- Whether to publish local IWEs -->
 
