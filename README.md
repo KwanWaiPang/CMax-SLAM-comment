@@ -35,18 +35,32 @@
 
     cd ~/catkin_ws_dvs && catkin build cmax_slam
 
+# 测试记录
+
+1. DAVIS240c的测试情况：实时性很差(完全不能实时，1分钟左右的rosbag要跑超过10分钟)，不同的rosbag要用不同的参数。但运动补偿的效果看着还行（也可能是本身采用了slice event,如果增大事件量会发现运动补偿的效果特别的差～～～）估算的pose也不以ros输出
+
 运行测试davis240c（直接采用原包）：
 
     roslaunch cmax_slam davis240c_testing.launch
 
-# 测试记录
-
-1. DAVIS240c的测试情况：实时性很差(完全不能实时，1分钟左右的rosbag要跑超过10分钟)，不同的rosbag要用不同的参数。但运动补偿的效果看着还行（也可能是本身采用了slice event,如果增大事件量会发现运动补偿的效果特别的差～～～）
 效果：
 * [shapes_rotation]()
 * [poster_rotation]()
 * [dynamic_rotation]()
 
+2. DVXplorer（640*480分别率）
+
+运行测试ecrot_handheld（作者提供的数据集）：
+
+    roslaunch cmax_slam ecrot_handheld.launch
+
+运行测试tub_main_building（作者提供的数据集）：
+
+    roslaunch cmax_slam ecrot_mount.launch
+
+效果（完全不知道运行了啥 :joy: 连“map”都没有输出）：
+* [river]()
+* [tub_main_building]()
 
 # 结论
 
