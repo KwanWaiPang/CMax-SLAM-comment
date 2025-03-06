@@ -58,7 +58,7 @@
 
     roslaunch cmax_slam ecrot_mount.launch
 
-效果（完全不知道运行了啥 :joy: 连“map”都没有输出）：
+效果：
 * [river](https://www.bilibili.com/video/BV1Yz421r7bs/)
 * [tub_main_building](https://www.bilibili.com/video/BV1Vz421C7eS/)
 
